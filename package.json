@@ -1,13 +1,16 @@
 {
   "name": "mongoose-pagination-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility package to simplify and generalize pagination with Mongoose in Node.js applications.",
   "repository": "github:hassan-sh/mongoose-pagination-helper",
   "main": "dist/cjs/index.js",
   "exports": {
-    "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.js"
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
   },
+  "./package.json": "./package.json",
   "scripts": {
     "build:cjs": "tsc --project tsconfig.cjs.json",
     "build:esm": "tsc --project tsconfig.esm.json",
@@ -24,5 +27,8 @@
   "license": "MIT",
   "devDependencies": {
     "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "mongoose": ">=7.x"
   }
 }
