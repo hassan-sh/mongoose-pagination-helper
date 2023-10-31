@@ -1,6 +1,6 @@
 {
   "name": "mongoose-pagination-helper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A utility package to simplify and generalize pagination with Mongoose in Node.js applications.",
   "repository": "github:hassan-sh/mongoose-pagination-helper",
   "main": "dist/cjs/index.js",
