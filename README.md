@@ -1,7 +1,7 @@
 # Mongoose Pagination Helper
 
 ## Description
-A simple and customizable pagination helper for Mongoose models. It offers easy-to-use methods for paginating database queries, along with utilities to get pagination metadata for UI/UX optimization.
+A simple and customizable pagination helper for Mongoose models. This package offers easy-to-use methods for paginating database queries, along with utilities to get pagination metadata for UI/UX optimization. It supports CommonJS, ES Modules, and TypeScript.
 
 ## Installation
 \`\`\`bash
@@ -10,6 +10,7 @@ npm install mongoose-pagination-helper
 
 ## Usage
 
+### CommonJS
 \`\`\`javascript
 const paginate = require('mongoose-pagination-helper');
 const MyModel = require('./models/myModel');
@@ -23,6 +24,22 @@ const options = {
 };
 
 const paginatedData = await paginate(MyModel, query, options);
+\`\`\`
+
+### ES Modules
+\`\`\`javascript
+import paginate from 'mongoose-pagination-helper';
+import MyModel from './models/myModel';
+
+// ... rest is same as CommonJS example
+\`\`\`
+
+### TypeScript
+\`\`\`typescript
+import paginate from 'mongoose-pagination-helper';
+import MyModel from './models/myModel';
+
+// ... rest is same as CommonJS example
 \`\`\`
 
 ## API
