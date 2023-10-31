@@ -67,4 +67,8 @@ const paginate = (model, queryConditions = {}, options = {}) => __awaiter(void 0
         throw error;
     }
 });
-export default paginate;
+if (typeof module !== 'undefined') {
+    module.exports = paginate;
+    module.exports.default = paginate;
+}
+export {};

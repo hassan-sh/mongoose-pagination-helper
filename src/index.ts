@@ -96,4 +96,7 @@ const paginate = async (
     }
   };
   
-  export default paginate;
+  if (typeof module !== 'undefined') {
+    module.exports = paginate;
+    module.exports.default = paginate;
+  }

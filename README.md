@@ -15,7 +15,7 @@ npm install mongoose-pagination-helper
 const paginate = require('mongoose-pagination-helper');
 const MyModel = require('./models/myModel');
 
-const query = { isActive: true }; // Your Mongoose query
+const query = { }; // Your Mongoose query
 const options = {
   fields: 'name age', // Fields to include in the result
   limit: 5, // Number of records per page
