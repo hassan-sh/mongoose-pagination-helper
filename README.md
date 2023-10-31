@@ -17,10 +17,11 @@ const MyModel = require('./models/myModel');
 
 const query = { }; // Your Mongoose query
 const options = {
-  fields: 'name age', // Fields to include in the result
   limit: 5, // Number of records per page
   page: 1, // Current page
-  showPages: 2 // Number of pages to show before and after the current page
+  showPages: 2, // Number of pages to show before and after the current page
+  selectFields: 'field1 field2', // Fields to include in the result
+  populateFields: 'field1 field2' // Fields to populate in the result
 };
 
 const paginatedData = await paginate(MyModel, query, options);
@@ -51,10 +52,11 @@ import MyModel from './models/myModel';
 - **`Model`** *(Mongoose Model)*: The mongoose model for which you want to paginate data.
 - **`query`** *(Object)*: Any valid mongoose query object.
 - **`options`** *(Object)*: Optional settings for pagination.
-  - `fields` *(String)*: The fields you want to include in the result.
   - `limit` *(Number)*: Number of records to fetch per page.
   - `page` *(Number)*: The current page, starts from 1.
   - `showPages` *(Number)*: Number of pages to show before and after the current one in the paginator.
+  - `selectFields` *(String)*: The fields you want to include in the result.
+  - `populateFields` *(String)*: The fields you want to populate in the result.
 
 #### Returns
 
