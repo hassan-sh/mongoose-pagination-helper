@@ -11,14 +11,14 @@ const findPagination = async (model, queryConditions = {}, options = {}) => {
     
         let currentPage = Math.max(1, pageNumberOption);
         let limit = Math.max(1, limitOption);
-  
+
         const totalItems = await model.countDocuments(queryConditions);
         const totalPages = Math.ceil(totalItems / limit);
   
         if (currentPage < 1) currentPage = 1;
         if (currentPage > totalPages) currentPage = totalPages;
   
-        const skip = (currentPage - 1) * limit;
+        const skip = Math.max(0, (currentPage - 1) * limit);
 
         // Calculate iterators for previous and next pages
         const iterator = {
