@@ -56,4 +56,10 @@ const aggregatePagination = async (model, aggregationPipeline, options) => {
     };
 };
 
+// module.exports = aggregatePagination;
+
+// For CommonJS
 module.exports = aggregatePagination;
+
+// For ES6 Modules
+// export default aggregatePagination;

@@ -62,4 +62,8 @@ const findPagination = async (model, queryConditions = {}, options = {}) => {
     }
 };
 
+// For CommonJS
 module.exports = findPagination;
+
+// For ES6 Modules
+// export default findPagination;
